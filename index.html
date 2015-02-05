@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="fr">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Petit déjeuner responsive</title>
+
+        <meta name="description" content="Petit déjeuner autour du responsive">
+        <meta name="author" content="Emanuelle Helly et Simon Bats">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/makina.css" id="theme">
+
+        <!-- Code syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section class="card" data-background="">
+                    <p>Petit déjeuner</p>
+                    <p><img class="unstyled" src="img/logo-makinacorpus.svg" alt="logo-makinacorpus"></p>
+                    <h1>Le responsive</h1>
+                    <p>
+                        5 février 2015
+                    </p>
+                    <p>
+                        <small>Par <a href="https://twitter.com/numahel">Emanuelle Helly</a> et <a href="https://twitter.com/simonbats12">Simon Bats</a>
+                        <br/> Intégratrice et développeur front-end
+                        </small>
+                    </p>
+
+                    <aside class="notes">
+                        Ceci est une note visible en mode prez en appuyant sur 'S'                  
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Sommaire</h2>
+                    <ol>
+                        <li>Le pourquoi du comment du responsive</li>
+                        <li>L'état technologique</li>
+                        <li>Quelques exemples</li>
+                        <li>Questions et réponses</li>
+                    </ol>
+                </section>
+
+                <section>
+                    <h1>Le pourquoi du comment du <strong>responsive</strong></h1>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Du sédentaire au mobile</h2>
+                    </section>
+                    <section>
+                        <div class="row middle-xs">
+                            <div class="col-xs">
+                                <div class="box align-left padding">
+                                    <h3 class="no-margin">Avant</h3><span>les internautes, c'était ça</span>    
+                                </div>
+                            </div>
+                            <div class="col-xs">
+                                <div class="box">
+                                    <img class="responsive" src="img/nos_ancetres_les_geeks.jpg" alt="les nerds"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row middle-xs fragment">
+                            <div class="col-xs">
+                                <div class="box">
+                                    <img class="responsive" src="img/amazon-fire-phone.jpeg" alt="des enfants avec des smartphones"/>
+                                </div>
+                            </div>
+                            <div class="col-xs">
+                                <div class="box align-left padding">
+                                    <h3 class="no-margin">Aujourd'hui</h3><span>ce serait plutôt ça</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Le web, omniprésent et anodin au quotidien</h3>
+                        <p class="padding align-left">Des utilisateurs <strong>hyper-connectés</strong>, <strong>impatients</strong>, <strong>technophiles</strong></p>
+                        <p class="padding align-right">Des sites pour <strong>tout</strong>, <strong>tout le monde</strong> et <strong>accessibles partout</strong>
+                            <br/><small>(ou presque...)</small>
+                        </p>
+                    </section>
+                </section>
+
+                <section>
+                    <section class="timeline">
+                        <h3>Le mobile fait son chemin</h3>
+                        <dl>
+                            <dt>-4000</dt>
+                            <dd>Sortie de la première tablette <img src="img/tablet_rimush_louvre.jpg"/></dd>
+                        </dl>
+                        <dl>
+                            <dt>2007</dt>
+                            <dd>Sortie du premier iPhone <img src="img/iphone-1.jpg"/></dd>
+                            <dt>2012</dt>
+                            <dd>Prise de conscience des enjeux marketings et commerciaux du mobile</dd>
+                        </dl>
+                    </section>
+                    <section>
+                        <h3>En 2015</h3>
+                        <img src="img/mobile-stats-vs-desktop-users-global-550x405.png">
+                    </section>
+                    <section>
+                        <h3>Des points clés</h3>
+                        <ul>
+                            <li>80% des internautes ont un smartphone</li>
+                            <li>34% des supports web émergents sont des smart-tv</li>
+                            <li>89% du temps passé sur les médias connectés se font via les apps</li>
+                        </ul>
+                        <p>
+                            <span>Sources : </span><a href="http://www.smartinsights.com/mobile-marketing/mobile-marketing-analytics/mobile-marketing-statistics/" title="chiffres clés du parc web mobile">smartinsights.com</a>
+                        </p>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Le contenu qui dut s'adapter au support</h2>
+                    </section>
+                    <section>
+                        <div class="padding">
+                            <dt>Le responsive</dt>
+                            <dd class="padding">Réagir rapidement et de manière positive</dd>
+                        </div>
+                        <div class="padding">
+                            <dt>Appliqué au web</dt>
+                            <dd>Site dont le contenu et l'expérience s'adaptent au support depuis lequel il est consulté</dd>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Plusieurs appellations</h3>
+                        <dl class="align-center">
+                        <div class="row top-xs">
+                            <div class="col-xs-6 padding">
+                                <dt>Statique</dt>
+                                <dd>Une taille d'écran particulière</dd>
+                            </div>
+                            <div class="col-xs-6 padding">
+                                <dt>Adaptatif</dt>
+                                <dd>Plusieurs tailles d'écrans définies</dd>
+                            </div>
+                            <div class="col-xs-6 padding">
+                                <dt>Fluide</dt>
+                                <dd>S'adapte à toutes les tailles d'écran</dd>
+                            </div>
+                            <div class="col-xs-6 padding">
+                                <dt>Responsive</dt>
+                                <dd>S'adapte selon les tailles d'écran et les cas d'utilisation</dd>
+                            </div>
+                        </div></dl>
+                    </section>
+                    <section>
+                        <div class="row middle-xs">
+                            <div class="col-xs">
+                                <p><strong>La fluidité face à l'adaptativité</strong></p>
+                            </div>
+                            <div class="col-xs">
+                                <img src="img/adaptatif-responsive.gif">
+                            </div>
+                        </div>
+                        <div class="row middle-xs">
+                            <div class="col-xs">
+                                <p><strong>Les unités relatives face aux unités fixes</strong></p>
+                            </div>
+                            <div class="col-xs">
+                                <img src="img/relative-static-unite.gif">
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Dissocier pour simplifier</h2>
+                        <ol>
+                            <li>La mise en page responsive</li>
+                            <li>Le contenu responsive</li>
+                        </ol>
+                    </section>
+                    <section>
+                        <h3>L'idéal</h3>
+                        <p>
+                            Le contenu est roi
+                            <br/><small>et est pensé par support</small>
+                        </p>
+                    </section>
+                    <section>
+                        <h3>La triste réalité</h3>
+                        <p>
+                            Le contenu est là... <small>et statique.</small>
+                            <br/>Ouf il y a la mise en page
+                        </p>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Le responsive ce n'est pas :</h2>
+                        <ul>
+                            <li>tasser</li>
+                            <li>un menu</li>
+                            <li>un quick win</li>
+                            <li>la solution</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Le responsive c'est :</h2>
+                        <ul>
+                            <li>une réponse</li>
+                            <li>une méthode</li>
+                            <li>un gain</li>
+                            <li>un investissement</li>
+                            <li>un coût</li>
+                            <li>cool</li>
+                        </ul>
+
+                        <aside class="notes">
+                            Exemple de Spotify, Deezer et Grooveshark qui ne sont aps responsive (ne correspond pas à leurs besoins)
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Et ne perdons pas de vue <br /><strong>l'accessibilité !</strong></h2>
+                    </section>
+                </section>
+
+                <section>
+                    <h1>L'état technologique</h1>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Savoir, c'est pouvoir</h2>
+                        <p>Comment détecter les différentes plateformes</p>
+                    </section>
+                    <section data-background="#8BC34A">
+                        <h3>Utiliser les <strong>mediaqueries</strong></h3>
+                        <div class="box">
+                            <p>En CSS</p>
+                            <pre>
+                                <code style="word-wrap: break-word;">
+@media screen and (min-width: 600px) {
+    /* La largeur minimum de l'affichage est 600 px inclus */
+}
+                                </code>
+                            </pre>
+                        </div>
+                        <div class="box">
+                            <p>En JS</p>
+                            <pre>
+                                <code style="word-wrap: break-word;">
+if (window.matchMedia("(min-width: 600px)").matches) {
+  /* La largeur minimum de l'affichage est 600 px inclus */
+} else {
+  /* L'affichage est inférieur à 600px de large */
+}
+                                </code>
+                            </pre>
+                        </div>
+                    </section>
+                    <section data-background="#EF6C00">
+                        <h3>Se baser sur la présence de <strong>fonctionnalités</strong></h3>
+                        <a href="http://modernizr.com/" alt="site du plugin Modernizr"><img src="img/modernizr.png" alt="Modernizr est un outil pour détecter les capacité du navigateur utilisé"></a>
+                    </section>
+                    <section data-background="#EF5350">
+                        <h3>Inspecter l'user agent <br />
+                        <strong>NON !</strong>
+                    </section>
+
+                </section>
+
+                <section>
+                    <h1>Mise en page responsive</h1>
+                    <p>Modeler le contenant</p>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>L'outil indispensable : <br /><strong>la grille</strong></h2>
+                        <p>Elle permet de mettre en place le flux du contenu</p>
+                        <img src="img/flow-or-not.gif" alt="contenu présent ou non dans un flux">
+                        <img src="img/col-breakpoint.gif" alt="les points de ruptures permettent la réorganisation du flux">
+                    </section>
+                    <section>
+                        <h3>Les technologies de grille : <br /><strong>Flexbox</strong></h3>
+                        <div class="exemple">
+                            <a href="http://flexboxgrid.com/" title="un plugin de grille en flex box">
+                                <img src="img/flexbox-grid.png" alt="flex-box-grid plugin">
+                            </a>    
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Les technologies de grille : <br /><strong>Display: table</strong></h3>
+                        <div class="exemple">
+                            <a href="http://chrisnager.github.io/ungrid/" title="un plugin de grille en display table">
+                                <img src="img/ungrid.png" alt="ungrid plugin">
+                            </a>    
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Les technologies de grille : <br /><strong>Float: left</strong></h3>
+                        <div class="exemple">
+                            <a href="http://getbootstrap.com/" title="un framework de grille en float left">
+                                <img src="img/bootstrap.png" alt="bootstrap">
+                            </a>    
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Les technologies de grille : <br /><strong>Display: inline-block</strong></h3>
+                        <p class="exemple padding">Méthode dépréciée</p>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Le couteau suisse : <strong>le framework</strong></h2>
+                        <img src="img/couteau-suisse.png">
+                    </section>
+                    <section class="bootstrap" data-background="#6f5499">
+                        <a href="http://getbootstrap.com/" title="site de Bootstrap"><img class="unstyled" src="img/bootstrap-2.png" alt="La page d'accueil de bootsrap"></a>
+                        <h3><strong>Bootstrap</strong></h3>
+                    </section>
+                    <section class="foundation" data-background="#085a78">
+                        <a href="http://foundation.zurb.com/" title="site de Foundation"><img class="unstyled" src="img/foundation.png" alt="la masquotte de foundation"></a>
+                        <h3><strong>Foundation</strong></h3>
+                    </section>
+                    <section>
+                        <h3><strong>Semantic UI</strong> & <strong>Gumby</strong></h3>
+                        <div class="row middle-xs">
+                            <div class="col-xs-6">
+                                <a href="http://semantic-ui.com/" title="site de Semantic UI"><img src="img/semantic-ui.png" alt="le framework Semantic UI"></a>    
+                            </div>
+                            <div class="col-xs-6">
+                                <a href="http://gumbyframework.com/" title="site de Gumby"><img src="img/gumby.png" alt="le framework Gumby"></a>   
+                            </div>
+                        </div>
+                    </section>
+                    <section data-background="#EF5350">
+                        <h3><strong>jQuery-UI</strong> et <strong>jQuery Mobile</strong><br />
+                        A proscrire !</h3>
+                        <p>rapport gain / performance désastreux</p>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Bonus : des éléments clés</h2>
+                    </section>
+                    <section>
+                        <h3>La navigation</h3>
+                        <p class="example padding">
+                            Petite astuce :
+                            <br/>les terminaux récents supportent le CSS3, n'hésitez pas à sortir la navigation du flux !
+                        </p>
+                    </section>
+
+                    <section>
+                        <h3>L'animation</h3>
+                        <p class="example padding">
+                            Petite astuce :
+                            <br/>divisez par 2 le temps que vous estimez nécessaire à la bonne visualisation de l'animation !
+                        </p>
+                    </section>
+                </section>
+
+                <section>
+                    <h1>Contenu responsive</h1>
+                    <p>Adapter le contenu</p>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Le format <strong>SVG</strong></h3>
+                        <pre>
+                            <code style="word-wrap: break-word;">
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="300" height="200">
+    <title>A rocking poney !</title>
+    <g id="Layer_2">
+        <path d="M203.398,195.758c-0.583,2.724-0.898,5.532-0.898,8.406c0,24.444,22.057,44.332,49.167,44.332
+            s49.167-19.888,49.167-44.332c0-8.328-2.564-16.125-7.013-22.789c-16.712,8.631-36.982,10.463-55.35,10.611
+            C226.203,192.085,214.774,192.559,203.398,195.758z"/>
+    </g>
+</svg>
+                            </code>
+                        </pre>
+                    </section>
+
+                    <section>
+                        <h2>Le <strong>Javascript</strong></h3>
+                        <pre>
+                            <code>
+Modernizr.load({
+    test: Modernizr.geolocation,
+    yep : 'geo.js',
+    nope: 'geo-polyfill.js'
+});
+                            </code>
+                        </pre>
+                    </section>
+
+                    <section>
+                        <h2>L'attribut <strong>srcset</strong></h3>
+                        <pre>
+                            <code style="white-space: pre-wrap;">
+<img src="small.jpg" srcset="large.jpg 1024w, medium.jpg 640w, small.jpg 320w" sizes="(min-width: 36em) 33.3vw, 100vw" alt="Alt text">
+                            </code>
+                        </pre>
+                    </section>
+
+                    <section>
+                        <h2>L'attribut CSS <strong>content</strong></h3>
+                        <pre>
+                            <code style="word-wrap: break-word;">
+element:before {
+    content: "...";
+    position: absolute;
+    right: -10px;
+    top: 0;
+}
+                            </code>
+                        </pre>
+                    </section>
+                </section>
+
+                <section>
+                    <h1>Exemples</h1>
+                    <section>
+                        <h2>Navigation</h2>
+                        <p><a href="http://global.burton.com/on/demandware.store/Sites-Burton_GLOBAL-Site/default">Burton.com</a></p>
+                        <ul>
+                            <li>Transition CSS au service de l'UX</li>
+                            <li>Conserve les sous-menus, en colonne</li>
+                        </ul>
+                        <h3>Autres exemples</h3>
+                        <p><a href="http://tympanus.net/Development/MultiLevelPushMenu/">Multilevel PushMenu</a><br />
+                        <small>sur <a href="http://tympanus.net/">tympanus.net</a></small></p>
+                    </section>
+                    <section>
+                        <h2>Images selon la taille</h2>
+                        <p><a href="http://fr.jimdo.com/">Jimdo.com</a></p>
+                        <ul>
+                            <li>Images dynamiques selon la taille de l'écran</li>
+                            <li>Navigation mal pensée</li>
+                        </ul>
+                        <h3>Autres exemples</h3>
+                        <p><a href="http://global.burton.com/on/demandware.store/Sites-Burton_GLOBAL-Site/default/Shop-BagsAndLuggage">Burton.com</a></p>
+                        
+                    </section>
+                    <section>
+                        <h2>Réorganisation du contenu</h2>
+                        <p><a href="http://jonwhitestudio.com/">Jonwhitestudio.com</a> <br/><small>via <a href="http://www.blogduwebdesign.com/inspiration-webdesign/responsive-webdesign-30-exemples-de-sites-web-adaptables/671">blogduwebdesign.com</a></small></p>
+                        <ul>
+                            <li>Choix des breakpoints</li>
+                            <li>Design flexible</li>
+                        </ul>
+                        <aside class="notes">
+                            <ul>
+                                <li>Choix des breakpoints : 
+                                <ul>
+                                    <li>550px : showcase de 1 à 2 colonnes</li>
+                                    <li>580px : travelogue de 1+2 à 3 colonnes</li>
+                                    <li>720px : travelogue passe en barre latérale droite, secondary passe de 1+2 à 3 colonnes</li>
+                                    <li>1100px : tout est positionné en colonnes</li>
+                                </ul>
+                                <li>design flexible</li>
+                            </ul>
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Contenu selon le support</h2>
+                        <p><a href="http://morehazards.com/">Morehazards.com</a></p>
+                        <ul>
+                            <li>Contenu présenté différement selon le support</li>
+                            <li>Le contenu est-il indispensable ?</li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <h1>Des questions ?</h1>
+                </section>
+
+                <section>
+                    <h1>Références</h1>
+                    <section>
+                        <h2>Web articles</h2>
+                        <ul>
+                            <li><a href="http://www.alsacreations.com/article/lire/1464-web-mobile-introduction-et-glossaire.html">Web mobile : introduction et glossaire (Alsacréations)</a></li>
+                            <li><a href="http://24ways.org/2011/conditional-loading-for-responsive-designs/">Conditional loading for responsive designs (24 Ways)</a></li>
+                            <li><a href="http://www.alsacreations.com/article/lire/1615-cest-quoi-le-responsive-web-design.html">C'est quoi le Responsive Web Design ? (Alsacréations)</a></li>
+                            <li><a href="http://blog.froont.com/9-basic-principles-of-responsive-web-design/">9 basic principle of responsive web design (Froont)</a></li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Web articles - 2</h2>
+                        <ul>
+                            <li><a href="http://www.alsacreations.com/tuto/lire/1493-css3-flexbox-layout-module.html">Le module de mise en page CSS3 - Flexbox (Alsacréation)</a></li>
+                            <li><a href="http://www.alsacreations.com/article/lire/1621-responsive-images-srcset.html">Les images responsives avec srcset (Alsacréation)</a></li>
+                            <li><a href="http://stackoverflow.com/questions/23171149/responsive-grid-frameworks-float-vs-display-table-cell">Les différentes grilles css et leurs caractéristiques (Stackoverflow)</a></li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Outils</h2>
+                        <ul>
+                            <li><a href="http://caniuse.com/">Compatibilité navigateur (Caniuse.com)</a></li>
+                            <li><a href="http://bradfrost.github.io/this-is-responsive/index.html">Patterns et news sur le responsive (This-is-responsive - Bradfrost)</a></li>
+                            <li><a href="http://www.google.com/design/spec/animation/authentic-motion.html#">Donner vie à ses animations - Google</a></li>
+                        </ul>
+                    </section>
+
+                </section>
+
+                <section>
+                    <h1>Crédits</h1>
+                    <section>
+                        <ul>
+                            <li>Slide 3 / 1 - nerds : <a href="http://www.stupiditiz.com/" alt="http://www.stupiditiz.com/">http://www.stupiditiz.com/</a></li>
+                            <li>Slide 3 / 1 - fillette : <a href="trendhunterstatic.com" alt="trendhunterstatic.com">trendhunterstatic.com</a></li>
+                            <li>Slide 4 - tablette d'argile : <a href="http://fr.wikipedia.org/" alt="http://fr.wikipedia.org/">http://fr.wikipedia.org/</a></li>
+                            <li>Slide 4 - iPhone : <a href="http://www.theverge.com/" alt="http://www.theverge.com/">http://www.theverge.com/</a></li>
+                            <li>Slide 4 / 2 - Graphique : <a href="http://www.smartinsights.com/" alt="http://www.smartinsights.com/">http://www.smartinsights.com/</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <ul>
+                            <li>Slide 9 / 2 - Logo Modernizr : <a href="http://modernizr.com/" alt="http://modernizr.com/">http://modernizr.com/</a></li>
+                            <li>Slide 11 / 1 - Logo flexbox grid : <a href="http://flexboxgrid.com/" alt="http://flexboxgrid.com/">http://flexboxgrid.com/</a></li>
+                            <li>Slide 11 / 2 - Logo ungrid : <a href="http://chrisnager.github.io/ungrid/" alt="http://chrisnager.github.io/ungrid/">http://chrisnager.github.io/ungrid/</a></li>
+                            <li>Slide 11 / 3 - Logo bootstrap : <a href="http://getbootstrap.com/" alt="http://getbootstrap.com/">http://getbootstrap.com/</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <ul>
+                            <li>Slide 12 - Couteau suisse artefacts : <a href="http://jaimemontshirt.com/" alt="http://jaimemontshirt.com/">http://jaimemontshirt.com/</a></li>
+                            <li>Slide 12 / 1 - Logo bootstrap : <a href="http://getbootstrap.com/" alt="http://getbootstrap.com/">http://getbootstrap.com/</a></li>
+                            <li>Slide 12 / 2 - Logo foundation : <a href="http://foundation.zurb.com/" alt="http://foundation.zurb.com/">http://foundation.zurb.com/</a></li>
+                            <li>Slide 12 / 3 - Home semantic UI : <a href="http://semantic-ui.com/" alt="http://semantic-ui.com/">http://semantic-ui.com/</a></li>
+                            <li>Slide 12 / 3 - Home gumby : <a href="http://gumbyframework.com/" alt="http://gumbyframework.com/">http://gumbyframework.com/</a></li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <h1>Merci !</h1>
+                    <img class="unstyled" src="img/logo-makinacorpus.svg" alt="logo-makinacorpus">
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+
+            // Full list of configuration options available at:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+                // Optional reveal.js plugins
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true },
+                    { src: 'plugin/notes/notes.js', async: true }
+                ]
+            });
+
+        </script>
+
+    </body>
+</html>

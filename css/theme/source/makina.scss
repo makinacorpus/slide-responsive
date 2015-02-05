@@ -1,0 +1,204 @@
+/**
+ * White theme for reveal.js. This is the opposite of the 'black' theme.
+ *
+ * Copyright (C) 2015 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #232F39;
+
+// Primary/body text
+$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
+$mainFontSize: 36px;
+$mainColor: #F8F8F8;
+
+// Vertical spacing between blocks of text
+$blockMargin: 20px;
+
+
+// Headings
+$headingMargin: 0 0 $blockMargin 0;
+$headingFont: 'Roboto', Helvetica, sans-serif;
+$headingColor: #F08A00;
+$headingLineHeight: 1.2;
+$headingLetterSpacing: normal;
+$headingTextTransform: normal;
+$headingTextShadow: none;
+$headingFontWeight: 300;
+$heading1TextShadow: $headingTextShadow;
+
+$heading1Size: 2em;
+$heading2Size: 1.5em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+// Links and actions
+$linkColor: #EF4E70;
+$linkColorHover: darken( $linkColor, 15% );
+
+// Text selection
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+$selectionColor: #fff;
+
+// Generates the presentation background, can be overridden
+// to return a background image or gradient
+@mixin bodyBackground() {
+    background: $backgroundColor;
+}
+
+section.has-light-background {
+    &, h1, h2, h3, h4, h5, h6 {
+        color: #222;
+    }
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+@import "../flexboxgrid.min.css";
+
+
+// UTILS
+
+.reveal {
+
+    section {
+
+        .green {
+            color: #8BC34A;
+        }
+
+        .red {
+            color: #EF5350;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            strong, b {
+                text-transform: uppercase;
+            }
+        }
+
+        &.card {
+            background-clip: padding-box;
+            border-radius: 10px;
+            background-color: #f5f5f5;
+            color: $backgroundColor;
+            box-shadow: 0px 2px 4px 0px #C0C0C0;
+        }
+
+        .row {
+            margin: 1em;
+        }
+
+        .row + .row {
+            margin-top: 2em;
+        }
+
+        .padding {
+            padding: 1em;
+        }
+
+        small {
+            vertical-align: middle;
+        }
+
+        img {
+            margin: 0 10px;
+            border: none;
+            background-clip: padding-box;
+            border-radius: 10px;
+            vertical-align: middle;
+            &.responsive {
+                width: 100%;
+                height: auto;
+            }
+
+            &.unstyled {
+                background: none;
+                box-shadow: none;
+            }
+        }
+
+        ul.unstyled-liste {
+            list-style: none;
+        }
+
+        li {
+            margin: 0.7em 0;
+            img {
+                max-height: 4em;
+                vertical-align: middle;
+            }
+        }
+
+        dt {
+            color: $headingColor;
+            font-family: $headingFont;
+            font-weight: $headingFontWeight;
+        }
+        dd {
+            background: rgba(255, 255, 255, 0.05);
+            margin-left: 0;
+            padding: 0.7em;
+        }
+
+        .timeline dd {
+            padding: 0.2em;
+        }
+
+        .exemple {
+            margin-top: 1em;
+        }
+        .no-margin {
+            margin: 0;
+        }
+
+        .align-left {
+            text-align: left;
+        }
+
+        .align-right {
+            text-align: right;
+        }
+
+        .align-center {
+            text-align: center;
+        }
+
+        .right {
+            float: right;
+        }
+
+        .left {
+            float: left;
+        }
+
+    }
+
+}
+
+// CUSTOMISATION DE SECTIONS EN PARTICULIER
+
+.bootstrap {
+    h3 {
+        color: darken(#6f5499, 20%);
+    }
+}
+
+.foundation {
+    h3 {
+        color: darken(#085a78, 20%);
+    }
+}
