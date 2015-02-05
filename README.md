@@ -1,12 +1,7 @@
 # Petit déjeuner sur le Responsive
 
-TO DO :
+Voici la présentation utilisée pour le petit déjeuner sur le Responsive qui s'est tenu à Toulouse à Makina Corpus le 5 février.
 
-* refactor and verify sentences in whole doc
-* add examples
-* chose a design
-* theme
-* resize and crop images
-* Add elements to references
+La présentation a été réalisée avec le très chouet (Reveal.js)[https://github.com/hakimel/reveal.js]
 
-I've tried to use background as an immpact method for things like good and bad practices or for frameworks universes
+Ce contient la version WEB ainsi que le PDF
